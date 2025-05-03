@@ -1,6 +1,6 @@
 import pytest
-from practicum.bun import Bun
-from data import BUN_NAME_1, BUN_NAME_2, BUN_PRICE
+from Diplom_1.practicum.bun import Bun
+from Diplom_1.data import BUN_NAME_1, BUN_NAME_2, BUN_PRICE
 
 
 class TestBuns:
