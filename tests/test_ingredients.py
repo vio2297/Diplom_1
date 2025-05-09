@@ -1,8 +1,8 @@
 import pytest
 
-from Diplom_1.data import SAUCE_PRICE, FILLING_NAME, FILLING_PRICE, SAUCE_NAME
-from Diplom_1.practicum.ingredient import Ingredient
-from Diplom_1.practicum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FILLING
+from data import SAUCE_PRICE, FILLING_NAME, FILLING_PRICE, SAUCE_NAME
+from practicum.ingredient import Ingredient
+from practicum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FILLING
 
 @pytest.mark.parametrize("ingredient_types, name, price",[
         (INGREDIENT_TYPE_SAUCE, SAUCE_NAME, SAUCE_PRICE),

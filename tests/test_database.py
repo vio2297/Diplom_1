@@ -1,5 +1,5 @@
-from Diplom_1.practicum.database import Database
-from Diplom_1.practicum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FILLING
+from practicum.database import Database
+from practicum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FILLING
 
 
 class TestDatabase:

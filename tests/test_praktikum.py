@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch, MagicMock
-from Diplom_1.practicum.praktikum import main
+from practicum.praktikum import main
 
 
 def test_main_function_prints_receipt(capsys):
