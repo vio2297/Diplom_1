@@ -34,12 +34,16 @@ class TestBurger:
         burger.set_buns(mock_bun)
         burger.add_ingredient(mock_sauce)
         expected_price = BUN_PRICE * 2 + SAUCE_PRICE
+
+        expected_receipt = (
+            f"(==== {BUN_NAME_1} ====)\n"
+            f"= sauce {SAUCE_NAME} =\n"
+            f"(==== {BUN_NAME_1} ====)\n"
+            f"\n"
+            f"Price: {expected_price}"
+        )
         receipt = burger.get_receipt()
-        assert all([
-            BUN_NAME_1 in receipt,
-            SAUCE_NAME in receipt,
-            f"Price: {expected_price}" in receipt
-        ]), "Чек оформлен неверно"
+        assert receipt == expected_receipt, f"Ожидался чек:\n{expected_receipt}\nА получен:\n{receipt}"
 
     # Получаем цену заказа
     def test_get_price(self, burger, mock_sauce, mock_filling, mock_bun):

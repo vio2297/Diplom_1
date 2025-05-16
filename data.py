@@ -12,8 +12,14 @@ FILLING_PRICE = 120
 
 def create_mock_ingredient(name, price):
     from unittest.mock import Mock
-    from Diplom_1.practicum.ingredient import Ingredient
+    from practicum.ingredient import Ingredient
     mock = Mock(spec=Ingredient)
     mock.get_name.return_value = name
     mock.get_price.return_value = price
     return mock
+
+def names_from_buns(buns):
+    return [bun.get_name() for bun in buns]
+
+def ingredient_names_by_type(ingredients, type_value):
+    return [i.get_name() for i in ingredients if i.get_type() == type_value]
